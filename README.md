@@ -12,7 +12,7 @@ if it doesn't run from the solution then:
     "DefaultConnection": "Server=(LocalDb)\\MSSQLLocalDB;DataBase=LecturerList;Trusted_Connection=True;MultipleActiveResultSets=True"
   },
   
-  Change the sever (LocalDb)\\MSSQLLocalDB and use  your own where database is located.
+Change the sever (LocalDb)\\MSSQLLocalDB and use  your own where database is located.
   
   
   
