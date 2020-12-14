@@ -1,0 +1,79 @@
+﻿@page
+@model Training_Facility.Pages.StudentList.EditModel
+
+<br />
+<h2 class="text-info">Edit Student</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <input type="hidden" asp-for="student.ID" />
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.ForeNames"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.ForeNames" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.Surname"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.Surname" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.DateOfBirth"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.DateOfBirth" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.EmailAddress"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.EmailAddress" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.degree"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.degree" class="form-control" />
+            </div>
+        </div>
+
+        @*<div class="form-group row">
+            <div class="col-3">
+                <label asp-for="lecturer.courses"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="lecturer.courses" class="form-control" />
+            </div>
+        </div>*@
+
+        <div class="form-group row">
+            <div class="col-2 offset-4">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3 ">
+                <a asp-page="Index" class="btn btn-success fom-control">Back to Students</a>
+            </div>
+        </div>
+
+    </form>
+
+
+
+</div>
+

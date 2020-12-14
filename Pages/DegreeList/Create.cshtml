@@ -1,0 +1,79 @@
+﻿@page
+@model Training_Facility.Pages.DegreeList.CreateModel
+
+<br />
+<h2 class="text-info">Create New Degree</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="degree.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="degree.Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="degree.Duration"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="degree.Duration" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="degree.Courses"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="degree.Courses" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="degree.lecturer"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="degree.lecturer" class="form-control" />
+            </div>
+        </div>
+
+        @*<div class="form-group row">
+            <div class="col-3">
+                <label asp-for="student.degree"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="student.degree" class="form-control" />
+            </div>
+        </div>*@
+
+        @*<div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="lecturer.courses"></label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="lecturer.courses" class="form-control" />
+                </div>
+            </div>*@
+
+        <div class="form-group row">
+            <div class="col-2 offset-4">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3 ">
+                <a asp-page="Index" class="btn btn-success fom-control">Back to Students</a>
+            </div>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+

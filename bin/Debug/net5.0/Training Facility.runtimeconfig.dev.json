@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Rapelang\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Rapelang\\.nuget\\packages"
+    ]
+  }
+}

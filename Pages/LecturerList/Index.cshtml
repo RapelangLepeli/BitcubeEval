@@ -1,0 +1,78 @@
+﻿@page
+@model Training_Facility.Pages.LecturerList.IndexModel
+
+<br />
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-infor"> Lecturer List</h2>
+    </div>
+    <div class="col-3">
+        <a  asp-page="Create" class="btn btn-info form-control text-white">Create New Lecturer</a>
+    </div>
+
+    <div class="col-12 boreder p-3 m-3 mt-3">
+        <form method="post">
+            @if (Model.lecturers.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="lecturers.FirstOrDefault().FullName" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="lecturers.FirstOrDefault().DateOfBirth" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="lecturers.FirstOrDefault().EmailAddress" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="lecturers.FirstOrDefault().degrees" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="lecturers.FirstOrDefault().courses" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label>Functions</label>
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.lecturers)
+                    {
+                <tr>
+                    <td>
+                        @item.FullName
+                    </td>
+                    <td>
+                        @item.DateOfBirth
+                    </td>
+                    <td>
+                        @item.EmailAddress
+                    </td>
+                    <td>
+                        @foreach (var degree in item)
+                        {
+                            @degree.Name
+                        }
+                    </td>
+                    <td>
+                        @foreach (var course in item)
+                        {
+                            @course.Name
+                        }
+                    </td>
+                    
+                    <td>
+                        <button  asp-page-handler="Delete" asp-route-id="@item.ID" onclick="return confirm('Sure to delete?')" class="btn btn-danger btn-sm">Delete</button>
+                        <a asp-page="Edit" asp-route-id="@item.ID" class"btn btn-success btn-sm text-white">Edit</a>
+                    </td>
+                </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No Lecturers vailable.</p>
+            }
+        </form>
+    </div>
+</div>

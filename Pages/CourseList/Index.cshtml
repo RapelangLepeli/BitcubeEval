@@ -1,0 +1,71 @@
+﻿@page
+@model Training_Facility.Pages.CourseList.IndexModel
+
+<br />
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-infor"> Course List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info form-control text-white">Create New Course</a>
+    </div>
+
+    <div class="col-12 boreder p-3 m-3 mt-3">
+        <form method="post">
+            @if (Model.Courses.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="Courses.FirstOrDefault().Name" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Courses.FirstOrDefault().Duration" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Courses.FirstOrDefault().Courses" class="text-info"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Courses.FirstOrDefault().degree" class="text-info"></label>
+                        </th>
+                        @*<th>
+                                <label asp-for="Students.FirstOrDefault()." class="text-info"></label>
+                            </th>*@
+                        <th>
+                            <label>Functions</label>
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.Courses)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Duration
+                            </td>
+                            <td>
+                                @item.Courses
+                            </td>
+                            <td>
+                                @item.degree
+                            </td>
+                            <td>
+                                <button asp-page-handler="Delete" asp-route-id="@item.ID" onclick="return confirm('Sure to delete?')" class="btn btn-danger btn-sm">Delete</button>
+                                <a asp-page="Edit" asp-route-id="@item.ID" class"btn btn-success btn-sm text-white">Edit</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No Students vailable.</p>
+            }
+        </form>
+    </div>
+</div>
+
+
+
