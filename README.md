@@ -14,5 +14,6 @@ if it doesn't run from the solution then:
   
 Change the sever (LocalDb)\\MSSQLLocalDB and use  your own where database is located.
   
-  
+  --------
+  This application uses .Net core 5.0 Razor pages instead of MVC
   
