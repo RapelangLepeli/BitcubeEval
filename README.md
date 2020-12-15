@@ -16,4 +16,8 @@ Change the sever (LocalDb)\\MSSQLLocalDB and use  your own where database is loc
   
   --------
   This application uses .Net core 5.0 Razor pages instead of MVC
+  --------------------------------------------------------
+  
+  The Validation folder contains the projects for Section 2.
+  
   
